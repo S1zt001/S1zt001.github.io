@@ -34,6 +34,45 @@
         p {
             font-size: 16px;
         }
+
+        /* 创建一个彩虹渐变背景 */
+        body {
+            background: linear-gradient(to right, #f06, #9f6, #06f, #f06);
+            background-size: 400% 400%;
+            animation: gradient 15s linear infinite;
+        }
+
+        /* 创建动画效果 */
+        .cool-element {
+            width: 100px;
+            height: 100px;
+            background-color: #f06;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        /* 定义背景渐变动画 */
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        /* 定义元素的跳动动画 */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
     </style>
 </head>
 <body>
@@ -41,7 +80,7 @@
         <h1>你看你妈呢</h1>
     </header>
     <div class="container">
-        <h2>关于我们</h2>
+        <h2>皮澎</h2>
         <p>滚</p>
         <h2>滚</h2>
         <p>滚</p>
@@ -50,5 +89,7 @@
             <li>滚</li>
         </ul>
     </div>
+    <!-- 创建动画元素 -->
+    <div class="cool-element"></div>
 </body>
 </html>
