@@ -3,99 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>鼠标跟随动画</title>
-    <style>
-        /* 添加一些基本的样式，您可以根据需要进行修改 */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-        }
-
-        h1 {
-            font-size: 24px;
-        }
-
-        p {
-            font-size: 16px;
-        }
-
-        /* 创建一个彩虹渐变背景 */
-        body {
-            background: linear-gradient(to right, #f06, #9f6, #06f, #f06);
-            background-size: 400% 400%;
-            animation: gradient 15s linear infinite;
-        }
-
-        /* 创建动画效果 */
-        .cool-element {
-            width: 100px;
-            height: 100px;
-            background-color: #f06;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation: bounce 2s ease-in-out infinite;
-            transition: transform 0.2s; /* 添加过渡效果 */
-        }
-
-        /* 鼠标跟随动画 */
-        body:hover .cool-element {
-            transform: scale(1.2); /* 根据需要调整缩放倍数 */
-        }
-
-        /* 定义背景渐变动画 */
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            100% {
-                background-position: 100% 50%;
-            }
-        }
-
-        /* 定义元素的跳动动画 */
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-    </style>
+    <title>答题网站</title>
 </head>
 <body>
-    <header>
-        <h1>欢迎访问我们的网站</h1>
-    </header>
-    <div class="container">
-        <h2>关于我们</h2>
-        <p>这是一个简单的网站介绍页面示例。您可以在这里写一些关于您的网站或组织的基本信息。</p>
-        <h2>联系信息</h2>
-        <p>如果您有任何问题或需要进一步信息，请随时与我们联系：</p>
-        <ul>
-            <li>Email: example@example.com</li>
-            <li>电话：123-456-7890</li>
-        </ul>
-    </div>
-    <!-- 创建动画元素 -->
-    <div class="cool-element"></div>
+    <h1>欢迎来到答题网站</h1>
+    <p>请回答以下问题：</p>
+    <form id="quiz-form">
+        <div class="question">
+            <p>1. 什么颜色是苹果的?</p>
+            <label>
+                <input type="radio" name="q1" value="红色"> 红色
+            </label>
+            <label>
+                <input type="radio" name="q1" value="绿色"> 绿色
+            </label>
+        </div>
+
+        <div class="question">
+            <p>2. 什么动物有四条腿？</p>
+            <label>
+                <input type="radio" name="q2" value="狗"> 狗
+            </label>
+            <label>
+                <input type="radio" name="q2" value="鸟"> 鸟
+            </label>
+        </div>
+
+        <button type="button" onclick="checkAnswers()">提交答案</button>
+    </form>
+
+    <script>
+        function checkAnswers() {
+            const answers = {
+                q1: document.querySelector('input[name="q1"]:checked'),
+                q2: document.querySelector('input[name="q2"]:checked')
+            };
+
+            const result = calculateResult(answers);
+
+            // 跳转到结果页面
+            window.location.href = `result.html?result=${result}`;
+        }
+
+        function calculateResult(answers) {
+            let score = 0;
+
+            if (answers.q1 && answers.q1.value === "红色") {
+                score += 1;
+            }
+
+            if (answers.q2 && answers.q2.value === "狗") {
+                score += 1;
+            }
+
+            return score;
+        }
+    </script>
 </body>
 </html>
