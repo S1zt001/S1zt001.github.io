@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>答题结果</title>
+</head>
+<body>
+    <h1>答题结果</h1>
+    <p>您的得分是：<span id="score">0</span> 分</p>
+    <p>感谢您参与答题！</p>
+
+    <script>
+        // 从URL参数中获取得分
+        const urlParams = new URLSearchParams(window.location.search);
+        const result = urlParams.get("result");
+
+        // 显示得分
+        document.getElementById("score").textContent = result;
+    </script>
+</body>
+</html>
