@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>答题网站</title>
-    <link rel="stylesheet" href="styles.css"> <!-- 引入样式表 -->
+    <title>答题网站 - 首页</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="page1.html">问题1</a></li>
+            <li><a href="page2.html">问题2</a></li>
+            <li><a href="page3.html">问题3</a></li>
+        </ul>
+    </nav>
     <div class="container">
-        <h1>欢迎来到答题网站</h1>
-        <p>请回答以下问题：</p>
-        <form id="quiz-form">
-            <!-- ... 问题和选项 ... -->
-            <button type="button" onclick="checkAnswers()">提交答案</button>
-        </form>
+        <h1><a href="index.html">答题网站</a></h1>
+        <p>请选择一个问题开始答题：</p>
+        <ul>
+            <li><a href="page1.html">问题1</a></li>
+            <li><a href="page2.html">问题2</a></li>
+            <li><a href="page3.html">问题3</a></li>
+        </ul>
     </div>
-
-    <script src="script.js"></script> <!-- 引入JavaScript脚本 -->
 </body>
 </html>
