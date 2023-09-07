@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>答题网站 - 问题2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="page1.html">问题1</a></li>
+            <li><a href="page2.html">问题2</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>问题2</h1>
+        <form id="quiz-form">
+            <div class="question">
+                <p>2. 什么动物有四条腿？</p>
+                <label>
+                    <input type="radio" name="q2" value="狗"> 狗
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="鸟"> 鸟
+                </label>
+            </div>
+            <button type="button" onclick="checkAnswers()">提交答案</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
