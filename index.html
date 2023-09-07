@@ -4,19 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>答题网站 - 首页</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            transition: background-color 0.3s; /* 添加过渡效果 */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            text-align: center;
+            transition: background-color 0.3s; /* 添加过渡效果 */
+        }
+
+        h1, h2, p {
+            transition: color 0.3s; /* 添加过渡效果 */
+        }
+
+        h1:hover, h2:hover, p:hover {
+            color: #ff6b6b; /* 鼠标悬停时颜色变化 */
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s; /* 添加过渡效果 */
+        }
+
+        button:hover {
+            background-color: #555; /* 鼠标悬停时颜色变化 */
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">首页</a></li>
-            <li><a href="page1.html">问题1</a></li>
-            <li><a href="page2.html">问题2</a></li>
-            <li><a href="page3.html">问题3</a></li>
-        </ul>
-    </nav>
+    <header>
+        <h1><a href="index.html">答题网站</a></h1> <!-- 添加链接到首页 -->
+    </header>
     <div class="container">
-        <h1><a href="index.html">答题网站</a></h1>
+        <h2>欢迎来到答题网站</h2>
         <p>请选择一个问题开始答题：</p>
         <ul>
             <li><a href="page1.html">问题1</a></li>
@@ -24,5 +65,12 @@
             <li><a href="page3.html">问题3</a></li>
         </ul>
     </div>
+
+    <script>
+        document.getElementById('quiz-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // 阻止表单默认提交行为
+            this.style.opacity = 0; // 添加淡出效果
+        });
+    </script>
 </body>
 </html>
