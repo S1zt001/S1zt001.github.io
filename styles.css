@@ -1,42 +1,35 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+/* ... 其他样式 ... */
+
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
     padding: 0;
-    background-image: url('background.jpg'); /* 添加背景图片 */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
     color: #fff;
+    text-decoration: none;
 }
 
 .container {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     text-align: center;
+    transition: background-color 0.3s; /* 添加过渡效果 */
 }
 
-h1 {
-    font-size: 36px;
-}
-
-p {
-    font-size: 20px;
-}
-
-button {
-    font-size: 16px;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-button:hover {
-    background-color: #555;
+.container:hover {
+    background-color: rgba(255, 255, 255, 1);
 }
